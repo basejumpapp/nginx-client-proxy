@@ -14,7 +14,7 @@ RUN yum -y install nginx python-pip
 # make nginx run in foreground
 RUN echo "" >> /etc/nginx/nginx.conf
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-RUN sed -i "s/http {/http {\n    server_names_hash_bucket_size 64;/g" /etc/nginx/nginx.conf
+RUN sed -i "s/http {/http {\n    server_names_hash_bucket_size 128;/g" /etc/nginx/nginx.conf
 
 # install supervisord
 # RUN echo "NETWORKING=yes" > /etc/sysconfig/network
