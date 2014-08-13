@@ -25,10 +25,6 @@ RUN pip install supervisor
 ADD supervisord.conf /etc/
 
 
-# add nginx start script
-ADD start-nginx.sh /usr/sbin/start-nginx.sh
-
-
 # networking
 EXPOSE 80
 
